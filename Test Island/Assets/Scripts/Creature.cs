@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Creature : AI
+public abstract class Creature : AI
 {
-	
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,9 +14,5 @@ public class Creature : AI
 	void Update ()
 	{
 
-	}
-
-	public Creature ()
-	{
 	}
 }
