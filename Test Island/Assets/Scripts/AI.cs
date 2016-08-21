@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AI : GameCharacter
 {
-
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,9 +13,5 @@ public class AI : GameCharacter
 	void Update ()
 	{
 
-	}
-
-	public AI ()
-	{
 	}
 }

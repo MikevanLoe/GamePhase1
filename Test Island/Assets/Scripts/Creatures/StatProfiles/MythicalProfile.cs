@@ -2,12 +2,14 @@
 
 public class MythicalProfile : Profile
 {
-	public MythicalProfile ()
+	public MythicalProfile (GrowthRate spc = GrowthRate.SuperFast,
+							GrowthRate def = GrowthRate.Faster,
+	                        GrowthRate atk = GrowthRate.Fast,
+	                        GrowthRate spd = GrowthRate.Slow,
+	                        GrowthRate end = GrowthRate.Average,
+	                        GrowthRate exp = GrowthRate.Slow)
+		: base (spc, def, atk, spd, end, exp)
 	{
-		this.Special = GrowthRate.SuperFast;
-		this.Defense = GrowthRate.Faster;
-		this.Attack = GrowthRate.Fast;
-		this.Speed = GrowthRate.Slow;
-		this.Endurance = GrowthRate.Average;
+
 	}
 }

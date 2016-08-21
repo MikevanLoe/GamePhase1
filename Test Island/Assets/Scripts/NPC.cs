@@ -14,8 +14,4 @@ public class NPC : AI
 	{
 
 	}
-
-	public NPC ()
-	{
-	}
 }

@@ -1,13 +1,15 @@
 ﻿using System;
 
-public class MythicalProfile : Profile
+public class BeastProfile : Profile
 {
-	public MythicalProfile ()
+	public BeastProfile (GrowthRate spc = GrowthRate.SuperSlow,
+	                        GrowthRate def = GrowthRate.Faster,
+	                        GrowthRate atk = GrowthRate.SuperFast,
+	                        GrowthRate spd = GrowthRate.Average,
+	                        GrowthRate end = GrowthRate.Average,
+	                        GrowthRate exp = GrowthRate.Fast)
+		: base (spc, def, atk, spd, end, exp)
 	{
-		this.Special = GrowthRate.SuperSlow;
-		this.Defense = GrowthRate.Faster;
-		this.Attack = GrowthRate.SuperFast;
-		this.Speed = GrowthRate.Average;
-		this.Endurance = GrowthRate.Average;
+
 	}
 }

@@ -2,12 +2,14 @@
 
 public class BugProfile : Profile
 {
-	public BugProfile ()
+	public BugProfile (GrowthRate spc = GrowthRate.Slower,
+	                   GrowthRate def = GrowthRate.Faster,
+	                   GrowthRate atk = GrowthRate.Slow,
+	                   GrowthRate spd = GrowthRate.Average,
+	                   GrowthRate end = GrowthRate.SuperFast,
+	                   GrowthRate exp = GrowthRate.SuperFast)
+		: base (spc, def, atk, spd, end, exp)
 	{
-		this.Special = GrowthRate.Slower;
-		this.Defense = GrowthRate.Faster;
-		this.Attack = GrowthRate.Slow;
-		this.Speed = GrowthRate.Average;
-		this.Endurance = GrowthRate.SuperFast;
+
 	}
 }

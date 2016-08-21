@@ -2,12 +2,14 @@
 
 public class PlantProfile : Profile
 {
-	public PlantProfile ()
+	public PlantProfile (GrowthRate spc = GrowthRate.Fast,
+	                     GrowthRate def = GrowthRate.SuperFast,
+	                     GrowthRate atk = GrowthRate.Slow,
+	                     GrowthRate spd = GrowthRate.SuperSlow,
+	                     GrowthRate end = GrowthRate.Faster,
+	                     GrowthRate exp = GrowthRate.Average)
+		: base (spc, def, atk, spd, end, exp)
 	{
-		this.Special = GrowthRate.Fast;
-		this.Defense = GrowthRate.SuperFast;
-		this.Attack = GrowthRate.Slow;
-		this.Speed = GrowthRate.SuperSlow;
-		this.Endurance = GrowthRate.Faster;
+		
 	}
 }
