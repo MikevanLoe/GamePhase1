@@ -49,7 +49,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// convert the world relative moveInput vector into a local-relative
 			// turn amount and forward amount required to head in the desired
 			// direction.
-			if (move.magnitude > 1f) move.Normalize();
+			//if (move.magnitude > 1f) move.Normalize();
 			move = transform.InverseTransformDirection(move);
 			CheckGroundStatus();
 			move = Vector3.ProjectOnPlane(move, m_GroundNormal);
@@ -141,12 +141,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			// the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
 			// which affects the movement speed because of the root motion.
-			if (m_IsGrounded && move.magnitude > 0)
+			if (m_IsGrounded && move.magnitude < 2)
 			{
 				m_Animator.speed = m_AnimSpeedMultiplier;
 			}
-			else
-			{
+            else if(m_IsGrounded && move.magnitude > 1)
+
+            {
+                m_Animator.speed = 1.3f;
+            }
+            else
+            {
 				// don't use that while airborne
 				m_Animator.speed = 1;
 			}
